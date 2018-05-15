@@ -63,7 +63,7 @@ class DocumentGeneralController extends Controller
      */
     public function show(document_general $document_general)
     {
-        //
+        return view('document_general.show', compact('document_general'));
     }
 
     /**
