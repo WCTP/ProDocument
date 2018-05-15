@@ -11,12 +11,19 @@
 |
 */
 
+// home route
 Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/logout', 'HomeController@logout');
+Route::get('/home', 'HomeController@index')->name('home');
 
+/* auth routes */
+Route::get('/logout', 'HomeController@logout');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+/* document_general routes */
+Route::get('/document_general/index', 'DocumentGeneralController@index');
+Route::get('/document_general/create', 'DocumentGeneralController@create');
+Route::get('/document_general/{document_general}', 'DocumentGeneralController@show');
+Route::post('/document_general', 'DocumentGeneralController@store');

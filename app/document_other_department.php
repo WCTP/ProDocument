@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class General_Document extends Model
+class document_other_department extends Model
 {
     //
 }

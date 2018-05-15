@@ -17,6 +17,7 @@
         <link href="{{ asset('/css/layouts.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('/css/home.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('/css/auth.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('/css/document_general.css') }}" rel="stylesheet" type="text/css">
 
     </head>
     <body>

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\General_Document;
+use App\document_user_administration;
 use Illuminate\Http\Request;
 
-class GeneralDocumentController extends Controller
+class DocumentUserAdministrationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class GeneralDocumentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\General_Document  $general_Document
+     * @param  \App\document_user_administration  $document_user_administration
      * @return \Illuminate\Http\Response
      */
-    public function show(General_Document $general_Document)
+    public function show(document_user_administration $document_user_administration)
     {
         //
     }
@@ -52,10 +52,10 @@ class GeneralDocumentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\General_Document  $general_Document
+     * @param  \App\document_user_administration  $document_user_administration
      * @return \Illuminate\Http\Response
      */
-    public function edit(General_Document $general_Document)
+    public function edit(document_user_administration $document_user_administration)
     {
         //
     }
@@ -64,10 +64,10 @@ class GeneralDocumentController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\General_Document  $general_Document
+     * @param  \App\document_user_administration  $document_user_administration
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, General_Document $general_Document)
+    public function update(Request $request, document_user_administration $document_user_administration)
     {
         //
     }
@@ -75,10 +75,10 @@ class GeneralDocumentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\General_Document  $general_Document
+     * @param  \App\document_user_administration  $document_user_administration
      * @return \Illuminate\Http\Response
      */
-    public function destroy(General_Document $general_Document)
+    public function destroy(document_user_administration $document_user_administration)
     {
         //
     }

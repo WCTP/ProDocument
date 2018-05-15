@@ -5,7 +5,7 @@
     <h3 class="title">User: {{ Auth::user()->name }}</h3>
   @endif
   <input type="text" name="search" size="12" placeholder="Search...">
-  <a href="#" class="main-link">General</a>
+  <a href="/document_general/index" class="main-link">General</a>
   <a href="#" class="main-link">Software</a>
   <a href="#" class="main-link">Workstations</a>
   <a href="#" class="main-link">Hardware</a>
