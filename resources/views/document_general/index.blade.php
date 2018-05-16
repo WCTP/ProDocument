@@ -1,7 +1,7 @@
 @extends ('layouts.master')
 
 @section('content')
-  <h1 class="title">General Documents</h1>
+  <h1 class="title">{{ $category }} Documents</h1>
 
   <div class="index-list">
     <hr>

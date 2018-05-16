@@ -15,9 +15,19 @@ class DocumentGeneralController extends Controller
      */
     public function index()
     {
-        $documents_general = document_general::orderby('title', 'desc')->get();
+        $category = document_general::get_category();
 
-        return view('document_general.index', compact('documents_general'));
+        $documents_general = document_general::where('category', '=', $category)
+          ->orderby('title', 'desc')->get();
+
+        return view('document_general.index', compact('documents_general', 'category'));
+    }
+
+    public function universal_index($category)
+    {
+      $documents_general = document_general::orderby('title', 'desc')->get();
+
+      return view('document_general.index', compact('documents_general', 'category'));
     }
 
     /**
@@ -27,7 +37,9 @@ class DocumentGeneralController extends Controller
      */
     public function create()
     {
-        return view('document_general.create');
+        $category = document_general::get_category();
+
+        return view('document_general.create', compact('category'));
     }
 
     /**
@@ -41,7 +53,8 @@ class DocumentGeneralController extends Controller
         $this->validate(request(), [
           'title' => 'required',
           'purpose' => 'required',
-          'process' => 'required'
+          'process' => 'required',
+          'category' => 'required'
         ]);
 
         $general_document = new document_general();
@@ -50,9 +63,10 @@ class DocumentGeneralController extends Controller
         $general_document->purpose = $request->input('purpose');
         $general_document->process = $request->input('process');
         $general_document->troubleshooting = $request->input('troubleshooting');
+        $general_document->category = $request->input('category');
         $general_document->save();
 
-        return redirect('/document_general/index');
+        return redirect('/document_general/index/' . $general_document->category);
     }
 
     /**
@@ -74,7 +88,7 @@ class DocumentGeneralController extends Controller
      */
     public function edit(document_general $document_general)
     {
-        //
+        return view('document_general.edit', compact('document_general'));
     }
 
     /**
@@ -86,7 +100,16 @@ class DocumentGeneralController extends Controller
      */
     public function update(Request $request, document_general $document_general)
     {
-        //
+      $this->validate(request(), [
+        'title' => 'required',
+        'purpose' => 'required',
+        'process' => 'required',
+        'category' => 'required'
+      ]);
+
+      $document_general->update($request->all());
+
+      return view('document_general.show', compact('document_general'));
     }
 
     /**
@@ -97,6 +120,15 @@ class DocumentGeneralController extends Controller
      */
     public function destroy(document_general $document_general)
     {
-        //
+        $category = $document_general->category;
+
+        if (Auth::check()) {
+          $document_general->delete();
+        }
+
+        $documents_general = document_general::where('category', '=', $category)
+          ->orderby('title', 'desc')->get();
+
+        return view('document_general.index', compact('documents_general', 'category'));
     }
 }

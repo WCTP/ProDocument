@@ -24,7 +24,10 @@ Route::get('/logout', 'HomeController@logout');
 Auth::routes();
 
 /* document_general routes */
-Route::get('/document_general/index', 'DocumentGeneralController@index');
-Route::get('/document_general/create', 'DocumentGeneralController@create');
+Route::get('/document_general/index/{category}', 'DocumentGeneralController@index');
+Route::get('/document_general/create/{category}', 'DocumentGeneralController@create');
 Route::get('/document_general/{document_general}', 'DocumentGeneralController@show');
+Route::get('/document_general/edit/{document_general}', 'DocumentGeneralController@edit');
 Route::post('/document_general', 'DocumentGeneralController@store');
+Route::post('/document_general/update/{document_general}', 'DocumentGeneralController@update');
+Route::delete('/document_general/delete/{document_general}', 'DocumentGeneralController@destroy');

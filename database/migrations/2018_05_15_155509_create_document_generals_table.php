@@ -16,6 +16,7 @@ class CreateDocumentGeneralsTable extends Migration
         Schema::create('document_generals', function (Blueprint $table) {
           $table->increments('id');
           $table->integer('user_id');
+          $table->string('category');
           $table->string('title');
           $table->string('purpose');
           $table->text('process');

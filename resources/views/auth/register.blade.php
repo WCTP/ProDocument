@@ -3,10 +3,9 @@
 @section('content')
   <h1 class="title">Register a User</h1>
 
-  <div class="auth-card">
+  <div class="form-card">
     <form method="POST" action="{{ route('register') }}">
         @csrf
-
 
         <label for="name">{{ __('Name') }}</label>
         <div>
