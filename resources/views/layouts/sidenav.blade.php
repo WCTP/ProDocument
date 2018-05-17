@@ -27,8 +27,9 @@
   /* Script for searchbar function */
   $("#search-box").keyup($.debounce(500, function () {
     if ($(this).val() === "") {
-        $(".search-results").css("display", "none");
+      $(".search-results").css("display", "none");
     } else {
+      $(".search-results").css("display", "block");
       $(".search-results").empty();
       $.get("/search/" + $("#search-box").val(), function(data) {
         if (data != null) {
