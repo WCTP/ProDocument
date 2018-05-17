@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\document_general;
 use Auth;
 
 class HomeController extends Controller
@@ -37,5 +38,15 @@ class HomeController extends Controller
       Auth::logout();
 
       return back();
+    }
+
+    public function search()
+    {
+      $keyword = document_general::get_category();
+
+      $results = document_general::where('title', 'LIKE', '%' . $keyword . '%')
+        ->get()->toArray();
+
+      return $results;
     }
 }

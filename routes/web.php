@@ -31,3 +31,6 @@ Route::get('/document_general/edit/{document_general}', 'DocumentGeneralControll
 Route::post('/document_general', 'DocumentGeneralController@store');
 Route::post('/document_general/update/{document_general}', 'DocumentGeneralController@update');
 Route::delete('/document_general/delete/{document_general}', 'DocumentGeneralController@destroy');
+
+/* search route */
+Route::get('/search/{keyword}', 'HomeController@search');

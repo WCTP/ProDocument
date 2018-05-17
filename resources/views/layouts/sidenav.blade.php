@@ -16,6 +16,28 @@
   @else
     <a href="/login" class="main-link">Sign In</a>
   @endif
-  <input type="text" name="search" size="12" placeholder="Search...">
+  <div class="search">
+    <input type="text" name="search" id="search-box" size="12" placeholder="Search...">
+  </div>
+  <div class="search-results"></div>
 
 </div>
+
+<script type="text/javascript">
+  /* Script for searchbar function */
+  $("#search-box").keyup($.debounce(500, function () {
+    if ($(this).val() === "") {
+        $(".search-results").css("display", "none");
+    } else {
+      $(".search-results").empty();
+      $.get("/search/" + $("#search-box").val(), function(data) {
+        if (data != null) {
+          $(".search-results").append('<h3 class="title">Search Results</h3>');
+          data.forEach(function(result) {
+            $(".search-results").append('<a href="/document_general/' + result.id + '">'+ result.title + '</a>');
+          });
+        }
+      });
+    }
+  }));
+</script>

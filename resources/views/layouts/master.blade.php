@@ -20,6 +20,9 @@
         <link href="{{ asset('/css/index.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('/css/show.css') }}" rel="stylesheet" type="text/css">
 
+        <!-- JS Scripts -->
+        <script src="{{ asset('/js/debounce.min.js') }}"></script>
+
     </head>
     <body>
 
