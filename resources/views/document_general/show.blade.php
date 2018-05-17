@@ -8,10 +8,10 @@
     <p>{{ $document_general->purpose }}</p>
     <hr>
     <h2>Process</h2>
-    <p>{{ $document_general->process }}</p>
+    <p>{!! html_entity_decode($document_general->process) !!}</p>
     <hr>
     <h2>Troubleshooting Tips</h2>
-    <p>{{ $document_general->troubleshooting }}</p>
+    <p>{!! html_entity_decode($document_general->troubleshooting) !!}</p>
     <form action="/document_general/delete/{{ $document_general->id }}" method="post">
       {{ csrf_field() }}
       {{ method_field('DELETE') }}

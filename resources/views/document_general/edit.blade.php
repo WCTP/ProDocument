@@ -28,4 +28,13 @@
       </button>
     </form>
   </div>
+
+  <script type="text/javascript">
+    /* allows nice edit to save data */
+    $("button").click(function () {
+      $("textarea").each(function () {
+        nicEditors.findEditor(this.id).saveContent();
+      });
+    });
+  </script>
 @endsection

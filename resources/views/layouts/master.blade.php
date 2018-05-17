@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>ProDocument</title>
+        <link rel="icon" href="{{ asset('/image/support_logo.ico') }}">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
@@ -22,6 +23,9 @@
 
         <!-- JS Scripts -->
         <script src="{{ asset('/js/debounce.min.js') }}"></script>
+        <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+        <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+
 
     </head>
     <body>
