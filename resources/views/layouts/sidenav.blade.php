@@ -16,6 +16,7 @@
   @else
     <a href="/login" class="main-link">Sign In</a>
   @endif
+  <a href="#" id="hide-nav" class="main-link">Hide Navigation</a>
   <div class="search">
     <input type="text" name="search" id="search-box" size="12" placeholder="Search...">
   </div>
@@ -41,4 +42,11 @@
       });
     }
   }));
+
+  $("#hide-nav").click(function() {
+    $(".sidenav").hide();
+    $("#show-nav").show();
+  });
+
+
 </script>
