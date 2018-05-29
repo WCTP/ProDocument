@@ -33,10 +33,19 @@
       @include('layouts.sidenav')
 
       <div class="main">
+        <button id="show-nav" class="hide-nav">NAV</button>
+
         <p>
           @yield('content')
         </p>
       </div>
 
     </body>
+
+    <script type="text/javascript">
+      $("#show-nav").click(function() {
+        $(".sidenav").show();
+        $("#show-nav").hide();
+      });
+    </script>
 </html>

@@ -45,6 +45,7 @@ class HomeController extends Controller
       $keyword = document_general::get_category();
 
       $results = document_general::where('title', 'LIKE', '%' . $keyword . '%')
+        ->orderBy('title', 'asc')
         ->get()->toArray();
 
       return $results;
