@@ -46,6 +46,7 @@
   $("#hide-nav").click(function() {
     $(".sidenav").hide();
     $("#show-nav").show();
+    $(".main").css("margin-left", "3%");
   });
 
 
