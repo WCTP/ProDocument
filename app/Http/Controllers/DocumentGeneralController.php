@@ -18,7 +18,7 @@ class DocumentGeneralController extends Controller
         $category = document_general::get_category();
 
         $documents_general = document_general::where('category', '=', $category)
-          ->orderby('title', 'desc')->get();
+          ->orderby('title', 'asc')->get();
 
         return view('document_general.index', compact('documents_general', 'category'));
     }
@@ -57,16 +57,16 @@ class DocumentGeneralController extends Controller
           'category' => 'required'
         ]);
 
-        $general_document = new document_general();
-        $general_document->user_id = Auth::user()->id;
-        $general_document->title = $request->input('title');
-        $general_document->purpose = $request->input('purpose');
-        $general_document->process = $request->input('process');
-        $general_document->troubleshooting = $request->input('troubleshooting');
-        $general_document->category = $request->input('category');
-        $general_document->save();
+        $document_general = new document_general();
+        $document_general->user_id = Auth::user()->id;
+        $document_general->title = $request->input('title');
+        $document_general->purpose = $request->input('purpose');
+        $document_general->process = $request->input('process');
+        $document_general->troubleshooting = $request->input('troubleshooting');
+        $document_general->category = $request->input('category');
+        $document_general->save();
 
-        return redirect('/document_general/index/' . $general_document->category);
+        return view('document_general.show', compact('document_general'));
     }
 
     /**
