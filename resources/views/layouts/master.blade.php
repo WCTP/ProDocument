@@ -46,6 +46,7 @@
       $("#show-nav").click(function() {
         $(".sidenav").show();
         $("#show-nav").hide();
+        $(".main").css("margin-left", "23%");
       });
     </script>
 </html>
