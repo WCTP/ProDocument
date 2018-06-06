@@ -4,16 +4,36 @@
   <h1 class="home-title">ProDocument Management System</h1>
   <h3 class="home-title">ChampSupport Wiki | Written by Walter Proulx</h3>
 
-  <div class="home-card">
-    <hr>
-      Welcome to the ProDocument: The Official ChampSupport Document Management System (DMS)! This is the official DMS that all techs will use to help keep track of troubleshooting and important tasks. Refer to the instructions below for important information.
-    <hr>
-    <h3>Signing In:</h3>
-    <p>Click on the sign in button on the left to sign in. Remember to ask John or Eric to make you an account for the Wiki so you can create your own documentation.</p>
-    <hr>
-    <h3>Categories:</h3>
-    <p>If you like at the side navigation you will see different categories. These mimic the ServiceDesk categories. When making a post, remember to set the category in the correct place so we can find it!</p>
-    <hr>
-    <br>
+  <div class="home-row">
+    <div class="home-card">
+      <a href="https://servicedesk.champlain.edu" class="home-card-title" target="_blank">ServiceDesk</a>
+      Text
+    </div>
+    <div class="home-card">
+      <a href="https://my.champlain.edu/ad" class="home-card-title" target="_blank">Active Directory</a>
+      Text
+    </div>
+  </div>
+
+  <div class="home-row">
+    <div class="home-card">
+      <a href="https://welcome.champlain.edu/showLogin.cc" class="home-card-title" target="_blank">Champlain Welcome</a>
+      Text
+    </div>
+    <div class="home-card">
+      <a href="https://my.champlain.edu/" class="home-card-title" target="_blank">My Champlain</a>
+      Text
+    </div>
+  </div>
+
+  <div class="home-row">
+    <div class="home-card">
+      <a href="/document_general/29" class="home-card-title">Phone Extensions</a>
+      Text
+    </div>
+    <div class="home-card">
+      <a href="#" class="home-card-title">Department Contact</a>
+      Text
+    </div>
   </div>
 @endsection
