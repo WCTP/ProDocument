@@ -1,22 +1,22 @@
 <!-- sidebar navigation -->
 <div class="sidenav">
-  <h1 class="title"><a href="/">ProDocument</a></h1>
+  <h1 class="title"><a href="/">Pro<span class="link-text">Document</span></a></h1>
   @if (Auth::check())
-    <h3 class="title">User: {{ Auth::user()->name }}</h3>
+    <h3 class="title">User: <span class="link-text">{{ Auth::user()->name }}</span></h3>
   @endif
-  <a href="/document_general/index/General" class="main-link">General</a>
-  <a href="/document_general/index/Software" class="main-link">Software</a>
-  <a href="/document_general/index/Workstation" class="main-link">Workstations</a>
-  <a href="/document_general/index/Hardware" class="main-link">Hardware</a>
-  <a href="/document_general/index/User Administration" class="main-link">User Administration</a>
-  <a href="/document_general/index/Other Department" class="main-link">Other Department</a>
+  <a href="/document_general/index/General" class="main-link"><i class="fa fa-book"></i> <span class="link-text">&nbsp&nbspGeneral</span></a>
+  <a href="/document_general/index/Software" class="main-link"><i class="fa fa-cloud"></i> <span class="link-text">&nbsp&nbspSoftware</span></a>
+  <a href="/document_general/index/Workstation" class="main-link"><i class="fa fa-desktop"></i> <span class="link-text">&nbsp&nbspWorkstations</span></a>
+  <a href="/document_general/index/Hardware" class="main-link"><i class="fa fa-gear"></i> <span class="link-text">&nbsp&nbspHardware</span></a>
+  <a href="/document_general/index/User Administration" class="main-link"><i class="fa fa-users"></i> <span class="link-text">&nbsp&nbspUser Administration</span></a>
+  <a href="/document_general/index/Other Department" class="main-link"><i class="fa fa-institution"></i> <span class="link-text">&nbsp&nbspOther Department</span></a>
   @if (Auth::check())
-    <a href="/create" class="main-link">Make New Document</a>
-    <a href="/logout" class="main-link">Sign Out</a>
+    <a href="/create" class="main-link"><i class="fa fa-file-code-o"></i> <span class="link-text">&nbsp&nbspMake New Document</span></a>
+    <a href="/logout" class="main-link"><i class="fa fa-sign-out"></i> <span class="link-text">&nbsp&nbspSign Out</span></a>
   @else
-    <a href="/login" class="main-link">Sign In</a>
+    <a href="/login" class="main-link"><i class="fa fa-sign-in"></i> <span class="link-text">&nbsp&nbspSign In</span></a>
   @endif
-  <a href="#" id="hide-nav" class="main-link">Hide Navigation</a>
+  <a href="#" id="hide-nav" class="main-link"><i class="fa fa-bell-slash"></i> <span class="link-text">&nbsp&nbspHide Navigation</span></a>
   <div class="search">
     <input type="text" name="search" id="search-box" size="12" placeholder="Search...">
   </div>

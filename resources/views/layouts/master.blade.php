@@ -26,6 +26,9 @@
         <script src="{{ asset('/js/nicEdit-latest.js')}}" type="text/javascript"></script>
         <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
 
+        <!-- Line Awesome icons -->
+        <link rel="stylesheet" href="{{ asset('/line-awesome/css/line-awesome-font-awesome.min.css') }}">
+
 
     </head>
     <body>
@@ -46,7 +49,7 @@
       $("#show-nav").click(function() {
         $(".sidenav").show();
         $("#show-nav").hide();
-        $(".main").css("margin-left", "23%");
+        $(".main").css("margin-left", "calc(70px + 3%)");
       });
     </script>
 </html>

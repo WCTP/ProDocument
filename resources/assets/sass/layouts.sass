@@ -10,6 +10,8 @@ body
   background: linear-gradient(20deg, #322441, #535882, #636791, #7378a4 )
   color: white
   padding-left: 10px
+  overflow: hidden
+  white-space: nowrap
 
   a
     text-decoration: none
@@ -31,16 +33,17 @@ body
 
 .sidenav
   height: 100%
-  width: 20%
-  min-width: 245px
+  width: 70px
   position: fixed
   z-index: 1
   top: 0
   left: 0
   background: linear-gradient(210deg, #382d59, #382d59, #382d59, #634f9a)
   overflow-x: hidden
+  overflow-y: hidden
   padding-top: 20px
   box-shadow: 2px 0px 4px 2px black
+  transition: 0.5s
 
   .title
     color: #ddd
@@ -49,27 +52,26 @@ body
     a
       text-decoration: none
       color: #ddd
-      transition: 0.6s
 
     a:hover
       color: #f6ae1a
-      transition: 0.6s
 
   .main-link
     display: block
     background-color: #241a35
-    border-top-right-radius: 100px
+    border-radius: 100px
     font-size: 1.5em
-    padding-left: 10px
+    margin-left: 10px
+    padding-left: 5px
+    padding-right: 10px
+    margin-right: 10px
     margin-top: 10px
     color: #fff
     text-decoration: none
-    transition: 1.0s
+    white-space: nowrap
 
   .main-link:hover
     background-color: #120813
-    border-top-right-radius: 0px
-    transition: 0.3s
     color: #f6ae1a
     cursor: wait
 
@@ -101,18 +103,44 @@ body
       margin-top: 10px
       color: #fff
       text-decoration: none
-      transition: 1.0s
 
     a:hover
       background-color: #120813
       border-top-right-radius: 0px
-      transition: 0.3s
       color: #f6ae1a
       cursor: wait
 
+  .link-text
+    display: none
+
+  .fa
+    font-size: 1.7em
+
+.sidenav:hover
+  height: 100%
+  width: 325px
+  position: fixed
+  transition: 0.3s
+  transition-delay: 0.6s
+
+  .link-text
+    display: inline
+
+  .main-link
+    border-top-right-radius: 100px
+    border-bottom-right-radius: 100px
+    border-top-left-radius: 0px
+    border-bottom-left-radius: 0px
+    margin-left: 0px
+    padding-left: 15px
+    transition: 0.5s
+    transition-delay: 0.6s
+
+  .main-link:hover
+    transition-delay: 0s
 
 .main
-  margin-left: 23%
+  margin-left: calc(70px + 3%)
   padding: 20px 10px
 
 .form-card
