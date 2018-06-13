@@ -40,7 +40,6 @@ body
   left: 0
   background: linear-gradient(210deg, #382d59, #382d59, #382d59, #634f9a)
   overflow-x: hidden
-  overflow-y: hidden
   padding-top: 20px
   box-shadow: 2px 0px 4px 2px black
   transition: 0.5s
@@ -86,6 +85,7 @@ body
     margin-bottom: 20px
     margin-top: 20px
     padding-left: 5px
+    visibility: hidden
 
   .search-results
     display: block
@@ -138,6 +138,10 @@ body
 
   .main-link:hover
     transition-delay: 0s
+
+  input
+    visibility: visible
+    transition-delay: 0.6s
 
 .main
   margin-left: calc(70px + 3%)
@@ -225,3 +229,19 @@ body
     font-size: 20px
     font-weight: bold
     padding: 5px
+
+::-webkit-scrollbar-track
+  border-bottom-right-radius: 5px
+  background-color: #241a35
+
+::-webkit-scrollbar
+  width: 8px
+  height: 8px
+
+::-webkit-scrollbar-thumb
+  background: linear-gradient(210deg, #666, #aaa, #aaa, #666)
+  border-radius: 10px
+
+::-webkit-scrollbar-corner
+  border-radius: 10px
+  background-color: transparent
