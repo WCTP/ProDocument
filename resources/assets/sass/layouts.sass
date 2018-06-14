@@ -1,5 +1,5 @@
 body
-  background: linear-gradient(135deg, #7378a4, #7378a4, #7378a4, #535882)
+  background-color: #00A9E0
   font-family: 'Ubuntu', sans-serif
   font-weight: 100
   height: 100vh
@@ -7,11 +7,12 @@ body
   margin: 0
 
 .title
-  background: linear-gradient(20deg, #322441, #535882, #636791, #7378a4 )
+  background-color: #CD545B
   color: white
   padding-left: 10px
   overflow: hidden
   white-space: nowrap
+  box-shadow: 0px 0px 2px 1px #222
 
   a
     text-decoration: none
@@ -38,10 +39,10 @@ body
   z-index: 1
   top: 0
   left: 0
-  background: linear-gradient(210deg, #382d59, #382d59, #382d59, #634f9a)
+  background: transparent
   overflow-x: hidden
   padding-top: 20px
-  box-shadow: 2px 0px 4px 2px black
+  box-shadow: 2px 0px 8px 1px black
   transition: 0.5s
 
   .title
@@ -57,7 +58,7 @@ body
 
   .main-link
     display: block
-    background-color: #241a35
+    background-color: #4B384C
     border-radius: 100px
     font-size: 1.5em
     margin-left: 10px
@@ -73,7 +74,7 @@ body
 
   .main-link:hover
     background-color: #120813
-    color: #f6ae1a
+    color: #F1B434
     cursor: wait
 
   input
@@ -120,14 +121,17 @@ body
     font-size: 1.7em
 
 .sidenav:hover
+  background-color: #236192
   height: 100%
   width: 325px
   position: fixed
+  transition: background-color ease
   transition: 0.3s
   transition-delay: 0.6s
 
   .link-text
     display: inline
+    padding-left: 15px
 
   .main-link
     border-top-right-radius: 100px

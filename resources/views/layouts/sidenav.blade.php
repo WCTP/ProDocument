@@ -2,21 +2,21 @@
 <div class="sidenav">
   <h1 class="title"><a href="/">Pro<span class="link-text">Document</span></a></h1>
   @if (Auth::check())
-    <h3 class="title">User: <span class="link-text">{{ Auth::user()->name }}</span></h3>
+    <h3 class="title">User: &nbsp<span class="link-text">{{ Auth::user()->name }}</span></h3>
   @endif
-  <a href="/document_general/index/General" class="main-link"><i class="fa fa-book"></i> <span class="link-text">&nbsp&nbspGeneral</span></a>
-  <a href="/document_general/index/Software" class="main-link"><i class="fa fa-cloud"></i> <span class="link-text">&nbsp&nbspSoftware</span></a>
-  <a href="/document_general/index/Workstation" class="main-link"><i class="fa fa-desktop"></i> <span class="link-text">&nbsp&nbspWorkstations</span></a>
-  <a href="/document_general/index/Hardware" class="main-link"><i class="fa fa-gear"></i> <span class="link-text">&nbsp&nbspHardware</span></a>
-  <a href="/document_general/index/User Administration" class="main-link"><i class="fa fa-users"></i> <span class="link-text">&nbsp&nbspUser Administration</span></a>
-  <a href="/document_general/index/Other Department" class="main-link"><i class="fa fa-institution"></i> <span class="link-text">&nbsp&nbspOther Department</span></a>
+  <a href="/document_general/index/General" class="main-link"><i class="fa fa-book"></i> <span class="link-text">General</span></a>
+  <a href="/document_general/index/Software" class="main-link"><i class="fa fa-cloud"></i> <span class="link-text">Software</span></a>
+  <a href="/document_general/index/Workstation" class="main-link"><i class="fa fa-desktop"></i> <span class="link-text">Workstations</span></a>
+  <a href="/document_general/index/Hardware" class="main-link"><i class="fa fa-gear"></i> <span class="link-text">Hardware</span></a>
+  <a href="/document_general/index/User Administration" class="main-link"><i class="fa fa-users"></i> <span class="link-text">User Administration</span></a>
+  <a href="/document_general/index/Other Department" class="main-link"><i class="fa fa-institution"></i> <span class="link-text">Other Department</span></a>
   @if (Auth::check())
-    <a href="/create" class="main-link"><i class="fa fa-file-code-o"></i> <span class="link-text">&nbsp&nbspMake New Document</span></a>
-    <a href="/logout" class="main-link"><i class="fa fa-sign-out"></i> <span class="link-text">&nbsp&nbspSign Out</span></a>
+    <a href="/create" class="main-link"><i class="fa fa-file-code-o"></i> <span class="link-text">New Document</span></a>
+    <a href="/logout" class="main-link"><i class="fa fa-sign-out"></i> <span class="link-text">Sign Out</span></a>
   @else
-    <a href="/login" class="main-link"><i class="fa fa-sign-in"></i> <span class="link-text">&nbsp&nbspSign In</span></a>
+    <a href="/login" class="main-link"><i class="fa fa-sign-in"></i> <span class="link-text">Sign In</span></a>
   @endif
-  <a href="#" id="hide-nav" class="main-link"><i class="fa fa-bell-slash"></i> <span class="link-text">&nbsp&nbspHide Navigation</span></a>
+  <a href="#" id="hide-nav" class="main-link"><i class="fa fa-bell-slash"></i> <span class="link-text">Hide Navigation</span></a>
   <div class="search">
     <input type="text" name="search" id="search-box" size="12" placeholder="Search...">
   </div>

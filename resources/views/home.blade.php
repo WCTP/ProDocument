@@ -1,8 +1,10 @@
 @extends('layouts.master')
 
 @section('content')
-  <h1 class="home-title">ProDocument Management System</h1>
-  <h3 class="home-title">ChampSupport Wiki | Written by Walter Proulx</h3>
+  <div class="home-title">
+    <h1>ProDocument Management System</h1>
+    <h3>ChampSupport Wiki | Written by Walter Proulx</h3>
+  </div>
 
   <div class="home-row">
     <div class="home-card">
